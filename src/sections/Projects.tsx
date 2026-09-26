@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import jwrThumbnail from "@/assets/projects/jungle-world-resort.png";
 import stockThumbnail from "@/assets/projects/stock-tracker.svg";
+import ktsThumbnail from "@/assets/projects/kts-wool-inventory.png";
 
 interface ProjectCardProps {
   title: string;
@@ -23,6 +24,15 @@ const projectList: ProjectCardProps[] = [
     techStack: ["React", "Node.js", "Express", "PostgreSQL", "Supabase"],
     imageUrl: jwrThumbnail,
     projectUrl: "https://github.com/Reyman764/Jungle_world_resort-Chitwan",
+  },
+  {
+    title: "KTS — Wool Inventory Stock",
+    year: 2026,
+    description:
+      "A wool inventory and stock management system built for Kumbeshwar Technical School, tracking stock levels and movements with a desktop-friendly Electron + React interface.",
+    techStack: ["React", "TypeScript", "Electron", "Vite"],
+    imageUrl: ktsThumbnail,
+    projectUrl: "https://github.com/Reyman764/KTS",
   },
   {
     title: "Stock Tracker",
@@ -62,7 +72,7 @@ function Projects() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl w-full mt-10"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl w-full mt-10"
             >
               {projectList.map((value, index) => (
                 <ProjectCard
